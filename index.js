@@ -316,7 +316,8 @@ $(document).ready(function () {
 
     $("#Content").empty();
     NewLine(logo, false);
-    //NewLine("Pssst, the solution is " + chosen_word + ".", false);
+    NewLine("Word to guess: " + display, false);
+    // NewLine("Pssst, the solution is " + chosen_word + ".", false);
     NewLine("Guess a letter: ", true);
   });
 });
@@ -343,7 +344,10 @@ $(document).on("keydown", function (e) {
       lives -= 1;
       if (lives <= 0) {
         end_of_game = true;
-        NewLine("You lose.", false);
+        NewLine(
+          "*******************************YOU LOSE*******************************",
+          false
+        );
         $(".console-carrot").remove();
         return;
       }
@@ -368,6 +372,11 @@ $(document).on("keydown", function (e) {
     NewLine(stages[lives], false);
 
     $(".console-carrot").remove();
+    NewLine(
+      `****************************${lives}/6 LIVES LEFT****************************`,
+      false
+    );
+    NewLine("Word to guess: " + display, false);
     NewLine("Guess a letter: ", true);
   }
 });
@@ -436,4 +445,3 @@ function shuffleArray(array) {
   }
   return array;
 }
-
