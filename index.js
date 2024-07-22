@@ -316,7 +316,7 @@ $(document).ready(function () {
 
     $("#Content").empty();
     NewLine(logo, false);
-    NewLine("Pssst, the solution is " + chosen_word + ".", false);
+    //NewLine("Pssst, the solution is " + chosen_word + ".", false);
     NewLine("Guess a letter: ", true);
   });
 });
