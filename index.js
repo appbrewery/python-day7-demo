@@ -280,7 +280,7 @@ stages = [
 `,
 ];
 
-const logo = `
+const logo = `www.appbrewery.com
  _                                             
 | |                                            
 | |__   __ _ _ __   __ _ _ __ ___   __ _ _ __  
@@ -345,7 +345,7 @@ $(document).on("keydown", function (e) {
       if (lives <= 0) {
         end_of_game = true;
         NewLine(
-          "*******************************YOU LOSE*******************************",
+          `***********************IT WAS ${chosen_word}! YOU LOSE**********************`,
           false
         );
         $(".console-carrot").remove();
